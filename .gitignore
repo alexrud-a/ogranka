@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+.vscode
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+public_html/wp-config.php
+public_html/wp-admin/
+public_html/wp-includes/
+public_html/wp-content/plugins/
+public_html/wp-content/themes/organka/node_modules/
+npm-debug.*
+Thumbs.db
