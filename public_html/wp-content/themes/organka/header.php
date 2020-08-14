@@ -36,7 +36,7 @@
                             array(
                                 'theme_location' => 'menu-1',
                                 'container'       => 'div',
-                                'menu_id'        => 'primary-menu',
+                                'container_class'     => 'nav__menu-wrap',
                                 'menu_class'     => 'nav__menu',
                             )
                         );
