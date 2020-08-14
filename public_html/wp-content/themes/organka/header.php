@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-12">
                 <div class="header__logo">
                     <?php
                     the_custom_logo();
