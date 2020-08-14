@@ -38,6 +38,10 @@
       height: 20px;
       z-index: 999;
 
+      @media screen and (min-width:990px) {
+        display: none;
+      }
+
       span {
         position: absolute;
         left: 0;
@@ -76,10 +80,6 @@
             transform: rotate(-45deg);
           }
         }
-      }
-
-      @media screen and (min-width:990px) {
-        display: none;
       }
     }
 
