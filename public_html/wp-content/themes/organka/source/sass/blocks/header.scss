@@ -101,13 +101,21 @@
       margin: 0;
       padding: 0;
 
-      .menu-item a {
-        display: block;
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 10px 5px;
-        border-bottom: 1px solid #ddd;
+      .menu-item {
+        a {
+          display: block;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 10px 5px;
+          border-bottom: 1px solid #ddd;
+        }
+
+        &-current {
+          a {
+            color: rgba($base-color, 0.5);
+          }
+        }
       }
     }
   }

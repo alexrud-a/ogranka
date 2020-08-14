@@ -8,11 +8,18 @@ body {
   font-family: $font;
   font-size: 14px;
   height: 100%;
-  color: $base-color
+  color: $base-color;
 }
 
 a {
   text-decoration:none;
+  color: $base-color;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: rgba($base-color, 0.5);
+  }
 }
 
 img {
