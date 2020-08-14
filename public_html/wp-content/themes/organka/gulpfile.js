@@ -34,7 +34,8 @@ const styles = () => {
 exports.styles = styles;
 
 const scripts = () => {
-    return gulp.src(src_dir+"js/script.js")
+    return gulp.src(['node_modules/slick-carousel/slick/slick.min.js',
+        src_dir+"js/script.js"])
         .pipe(plumber())
         .pipe(sourcemap.init())
         .pipe(debug({title: 'js:'}))
