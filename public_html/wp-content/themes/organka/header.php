@@ -20,11 +20,11 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div class="page">
+<div class="wrap-page">
 	<header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-sm-12">
                     <div class="nav">
                         <button class="nav__btn-toggle js-toggle">
                             <span></span>

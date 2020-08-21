@@ -1,12 +1,13 @@
 * {
-  box-sizing:border-box
+  box-sizing:border-box;
+  outline: none;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   font-family: $font;
-  font-size: 14px;
+  font-size: 16px;
   height: 100%;
   color: $base-color;
 }
@@ -27,12 +28,46 @@ img {
   height:auto;
 }
 
-.page {
+.wrap-page {
   max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   letter-spacing: 1px;
   padding-top: 90px;
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    width: max-content;
+    transition: all .2s ease-in-out;
+    border-radius: 0;
+    box-shadow:none;
+
+    &--white {
+      color: #fff;
+      border: 1px solid #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+
+    &--black {
+      background-color: #000;
+      border: 1px solid #000;
+      color: #fff;
+
+      &:hover {
+        background-color: transparent;
+        color: #000;
+      }
+    }
+  }
+
 }
