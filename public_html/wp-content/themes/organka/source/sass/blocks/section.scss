@@ -1,6 +1,15 @@
 .section {
   padding: 20px 0;
 
+  &__img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__row {
+    margin-bottom: 40px;
+  }
+
   &--main {
     padding: 0 0 20px;
   }
@@ -9,5 +18,22 @@
     font-size: 25px;
     font-weight: 600;
     line-height: 32px;
+    margin-bottom: 34px;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    text-align: center;
   }
 }

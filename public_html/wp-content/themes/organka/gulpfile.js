@@ -11,6 +11,7 @@ const concat = require('gulp-concat');
 const debug = require('gulp-debug');
 const gulpif = require('gulp-if');
 const argv = require('argv');
+const jsmin = require('gulp-jsmin');
 
 // Styles
 
@@ -42,6 +43,7 @@ const scripts = () => {
         .pipe(concat('script.min.js'))
         .pipe(debug({title: 'jsconcat:'}))
         .pipe(gulpif(argv.prod, uglify()))
+        .pipe(jsmin())
         .pipe(sourcemap.write('.'))
         .pipe(gulp.dest(build_dir+"js"));
 }

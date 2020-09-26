@@ -14,32 +14,30 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="footer__item">
                     <div class="footer__title">
-                        О КОМПАНИИ
+                        О компании
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="footer__item">
                     <div class="footer__title">
-                        КАТАЛОГ
+                        Услуги
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="footer__item">
                     <div class="footer__title">
-                        УСЛУГИ
+                        Контакты
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="footer__item">
-                    <div class="footer__title">
-                        КОНТАКТЫ
-                    </div>
+            <div class="col-md-12">
+                <div class="footer__copyright">
+                    Все права защищены 2019-<? echo date('Y')?> «MagnetGems Studio»
                 </div>
             </div>
         </div>
