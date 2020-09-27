@@ -8,56 +8,48 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				organka_posted_on();
-				organka_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php organka_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'organka' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'organka' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php organka_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="product-slider js-product-slider">
+        <? if (get_field('video')) : ?>
+        <div>
+            <div class="video" data-video="<? the_field('video'); ?>">
+                <? the_post_thumbnail(); ?>
+                <div class="video__play-btn js-play">
+                    <svg x="0px" y="0px" width="30" viewBox="0 0 494.148 494.148">
+                        <path fill="#fff" d="M405.284,201.188L130.804,13.28C118.128,4.596,105.356,0,94.74,0C74.216,0,61.52,16.472,61.52,44.044v406.124c0,27.54,12.68,43.98,33.156,43.98c10.632,0,23.2-4.6,35.904-13.308l274.608-187.904c17.66-12.104,27.44-28.392,27.44-45.884C432.632,229.572,422.964,213.288,405.284,201.188z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <? endif; ?>
+        <?
+        $images = get_field('foto');
+        if( $images ):
+        foreach( $images as $image ): ?>
+        <div>
+            <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>">
+        </div>
+        <?
+        endforeach;
+        endif;
+        ?>
+    </div>
+    <script>
+        $('.js-product-slider').each(function () {
+            $(this).slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                autoplay: false,
+                arrows: true,
+                dots: false,
+                prevArrow: '<div class="slider__arrow slider__arrow--prev"><svg fill="#000" width="15" viewBox="0 0 5 9"><path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" /></svg></div>',
+                nextArrow: '<div class="slider__arrow slider__arrow--next"><svg fill="#000" width="15" viewBox="0 0 5 9"><path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" /></svg></div>',
+            });
+        });
+        $('.js-play').on('click', function () {
+            let video = $(this).parent().data('video');
+            $(this).parent().html('<video src="'+video+'" controls></video>');
+        });
+    </script>
 </article><!-- #post-<?php the_ID(); ?> -->

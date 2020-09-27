@@ -36,6 +36,8 @@ exports.styles = styles;
 
 const scripts = () => {
     return gulp.src(['node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/fancybox/dist/js/jquery.fancybox.js',
+        'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
         src_dir+"js/script.js"])
         .pipe(plumber())
         .pipe(sourcemap.init())

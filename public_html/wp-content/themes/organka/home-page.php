@@ -60,29 +60,24 @@ if(  get_field('text-section') ): ?>
             </div>
             <div class="col-12">
                 <div class="catalog">
-                    <a href="#" class="catalog__item">
-                        <div class="catalog__cat">
-                            Круглая
-                        </div>
-                    </a>
-                    <a href="#" class="catalog__item">
-                        <div class="catalog__cat">
-                            Груша
-                        </div>
-                    </a>
-                    <a href="#" class="catalog__item">
-                        <div class="catalog__cat">
-                            Принцесса
-                        </div>
-                    </a>
-                    <a href="#" class="catalog__item">
-                        <div class="catalog__cat">
-                            Маркиз
-                        </div>
-                    </a>
+                    <?php
+                    $cats = get_terms([
+                        'taxonomy'   => 'category',
+                        'hide_empty' => true,
+                        'parent' => 0,
+                        'number' => 4,
+                    ]);
+                    foreach ($cats as $cat) :
+                        ?>
+                        <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item">
+                            <div class="catalog__cat">
+                                <?php echo $cat->name ?>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
                 </div>
-                <a class="section__btn btn btn--black catalog__btn" href="#">
-                    Все категории
+                <a class="section__btn btn btn--black catalog__btn" href="/katalog">
+                    Смотреть все
                 </a>
             </div>
         </div>
@@ -206,10 +201,24 @@ if(  get_field('text-section') ): ?>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="slider-products">
-                    <a href="#">
-                        <div class="slider-products__item"></div>
-                    </a>
+                <div class="slider-products js-products-slider">
+                    <?
+                    $myposts = get_posts( array(
+                        'post_type' => 'post',
+                        'numberposts' => 8,
+                        'post_per_page' => 8,
+                        'orderby' => 'rand',
+                    ) );
+                    foreach($myposts as $post){
+                        setup_postdata($post); ?>
+
+                        <div>
+                            <a class="slider-products__item js-modal" href="<? the_permalink(); ?>" style="background-image: url('<? the_post_thumbnail_url('medium'); ?>')">
+                            </a>
+                        </div>
+
+                    <? }
+                    wp_reset_postdata(); ?>
                 </div>
             </div>
         </div>

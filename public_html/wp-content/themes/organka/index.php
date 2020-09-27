@@ -15,42 +15,36 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section__title">
+                        Каталог
+                    </h2>
+                </div>
+                <div class="col-12">
+                    <div class="catalog">
+                        <?php
+                        $cats = get_terms([
+                            'taxonomy'   => 'category',
+                            'hide_empty' => true,
+                            'parent' => 0,
+                        ]);
+                        foreach ($cats as $cat) :
+                            ?>
+                            <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item">
+                                <div class="catalog__cat">
+                                    <?php echo $cat->name ?>
+                                </div>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
 
 <?php
 get_sidebar();
