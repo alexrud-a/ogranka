@@ -24,7 +24,7 @@
 	<header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-lg-9 col-sm-12">
                     <div class="nav">
                         <button class="nav__btn-toggle js-toggle">
                             <span></span>
@@ -43,12 +43,12 @@
                         ?>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <div class="header__logo">
-                    <?php
-                    the_custom_logo();
-                    ?>
+                <div class="col-lg-3 col-md-12">
+                    <div class="header__logo">
+                        <?php
+                        the_custom_logo();
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

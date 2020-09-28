@@ -213,7 +213,7 @@ if(  get_field('text-section') ): ?>
                         setup_postdata($post); ?>
 
                         <div>
-                            <a class="slider-products__item js-modal" href="<? the_permalink(); ?>" style="background-image: url('<? the_post_thumbnail_url('medium'); ?>')">
+                            <a class="slider-products__item js-modal" href="<? the_permalink(); ?>" style="background-image: url('<? the_post_thumbnail_url('large'); ?>')">
                             </a>
                         </div>
 
