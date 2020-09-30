@@ -98,6 +98,33 @@ if(  get_field('text-section') ): ?>
 </section>
     <? endif; ?>
 
+<?php
+if( have_rows('vidy_ogranki') ): ?>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section__title section__title--center">
+                    Виды огранки
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <div class="icon-block">
+                    <? while ( have_rows('vidy_ogranki') ) : the_row(); ?>
+                    <div class="icon-block__item">
+                        <div class="icon-block__item-inner">
+                            <img class="icon-block__item-icon" src="<? the_sub_field('ikonka') ?>">
+                            <div class="icon-block__item-text"><? the_sub_field('nazvanie') ?></div>
+                        </div>
+                    </div>
+                    <? endwhile; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<? endif; ?>
+
 <? if (have_rows('ogranka', 63)) : ?>
 <section class="section">
     <div class="container">
@@ -224,36 +251,36 @@ if(  get_field('text-section') ): ?>
         </div>
     </div>
 </section>
-<section class="section">
+<!--<section class="section">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                <h2 class="section__title">-->
+<!--                    Отзывы наших клиентов-->
+<!--                </h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                <div class="slider-feedback">-->
+<!--                    <a href="#">-->
+<!--                        <div class="slider-feedback__item"></div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<section class="section section--form">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section__title">
-                    Отзывы наших клиентов
-                </h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="slider-feedback">
-                    <a href="#">
-                        <div class="slider-feedback__item"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section__title">
+                <h2 class="section__title section__title--center">
                     Задать вопрос:
                 </h2>
             </div>
             <div class="col-12">
-                <div class="form__wrap">
+                <div class="form-wrap">
                     <? echo do_shortcode('[contact-form-7 id="29" title="Form"]'); ?>
                 </div>
             </div>

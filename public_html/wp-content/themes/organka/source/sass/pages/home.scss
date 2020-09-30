@@ -206,4 +206,26 @@
   }
 
   /*----------END MODAL PRODUCT----------*/
+
+
+  /*----------ICON BLOCK----------*/
+  .icon-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 50%;
+      text-align: center;
+      padding: 20px;
+
+      @media screen and (min-width: $tablet) {
+        width: 25%;
+      }
+    }
+
+    &__item-icon {
+      margin-bottom: 10px;
+    }
+  }
+  /*----------END ICON BLOCK----------*/
 }
