@@ -34,6 +34,11 @@
         endif;
         ?>
     </div>
+    <div class="mt-4 text-center">
+        <a class="slider__btn btn btn--black js-modal-form" href="#modal" tabindex="0">
+            Заказать
+        </a>
+    </div>
     <script>
         $('.js-product-slider').each(function () {
             $(this).slick({

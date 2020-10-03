@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-    <section class="section">
+    <section class="section catalog-page">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -28,12 +28,12 @@ get_header();
                         <?php
                         $cats = get_terms([
                             'taxonomy'   => 'category',
-                            'hide_empty' => true,
+                            'hide_empty' => false,
                             'parent' => 0,
                         ]);
                         foreach ($cats as $cat) :
                             ?>
-                            <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item">
+                            <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item" style="background-image: url('<? the_field('izobrazhenie_kategorii', $cat) ?>');">
                                 <div class="catalog__cat">
                                     <?php echo $cat->name ?>
                                 </div>

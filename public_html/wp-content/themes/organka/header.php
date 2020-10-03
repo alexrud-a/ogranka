@@ -23,8 +23,8 @@
 <div class="wrap-page">
 	<header class="header">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-sm-12">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-2">
                     <div class="nav">
                         <button class="nav__btn-toggle js-toggle">
                             <span></span>
@@ -43,8 +43,9 @@
                         ?>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12">
-                    <div class="header__logo">
+                <div class="col-lg-5 col-10 text-right">
+                    <a class="btn btn--black js-modal-form hidden-xs" href="#modal">Обратный звонок</a>
+                    <div class="header__logo" style="display: inline-block">
                         <?php
                         the_custom_logo();
                         ?>
@@ -53,3 +54,4 @@
             </div>
         </div>
 	</header>
+    <main class="main">

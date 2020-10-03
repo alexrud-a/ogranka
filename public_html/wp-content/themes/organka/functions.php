@@ -104,6 +104,11 @@ if ( ! function_exists( 'organka_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'organka_setup' );
 
+## Удаляет "Рубрика: ", "Метка: " и т.д. из заголовка архива
+add_filter( 'get_the_archive_title', function( $title ){
+    return preg_replace('~^[^:]+: ~', '', $title );
+});
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -203,4 +208,5 @@ function disable_wp_emojis_in_tinymce( $plugins ) {
         return array();
     }
 }
+
 /* --------------------------------------------------------------------------- */

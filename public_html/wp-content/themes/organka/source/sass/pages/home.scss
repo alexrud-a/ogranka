@@ -80,32 +80,24 @@
     }
 
     &__item:first-child {
-      background-image: url('/wp-content/uploads/2020/09/cat1_2-1.jpg');
-
       @media screen and (min-width: $tablet) {
         grid-column: 1/2;
       }
     }
 
     &__item:nth-child(2) {
-      background-image: url('/wp-content/uploads/2020/09/cat2_2-792x400-1.jpg');
-
       @media screen and (min-width: $tablet) {
         grid-column: 2/4;
       }
     }
 
     &__item:nth-child(3) {
-      background-image: url('/wp-content/uploads/2020/09/cat3_2-792x400-1.jpg');
-
       @media screen and (min-width: $tablet) {
         grid-column: 1/3;
       }
     }
 
     &__item:nth-child(4) {
-      background-image: url('/wp-content/uploads/2020/09/cat4_2.jpg');
-
       @media screen and (min-width: $tablet) {
         grid-column: 3/4;
       }
@@ -148,64 +140,6 @@
   }
 
   /*----------END SLIDER-PRODUCTS----------*/
-
-  /*----------MODAL PRODUCT----------*/
-
-  .product-slider {
-    &__video {
-      position: relative;
-      width: 700px;
-      max-width: 100%;
-      overflow: hidden;
-    }
-
-    img {
-      width: 100%;
-      height: 300px;
-      max-width: 100%;
-      object-fit: cover;
-
-      @media screen and (min-width: $tablet) {
-        height: 500px;
-      }
-    }
-
-    video {
-      width: 100%;
-      height: 300px;
-      max-width: 100%;
-      object-fit: cover;
-
-      @media screen and (min-width: $tablet) {
-        height: 490px;
-      }
-    }
-
-    &__video-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-
-    &__img {
-      width: 100%;
-      height: 300px;
-      max-width: 100%;
-      object-fit: cover;
-
-      @media screen and (min-width: $tablet) {
-        height: 500px;
-      }
-    }
-  }
-
-  /*----------END MODAL PRODUCT----------*/
 
 
   /*----------ICON BLOCK----------*/

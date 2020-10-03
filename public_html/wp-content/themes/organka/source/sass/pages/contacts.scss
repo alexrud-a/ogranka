@@ -1,0 +1,14 @@
+.section {
+  &__map {
+    height: 400px;
+    background-color: #efefef;
+    margin-bottom: 25px;
+  }
+}
+
+.contacts {
+  margin:  40px auto;
+  &__item {
+    margin-bottom: 20px;
+  }
+}

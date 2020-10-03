@@ -71,9 +71,11 @@ if( have_rows('komanda') ): ?>
             <div class="row">
                 <? while ( have_rows('komanda') ) : the_row(); ?>
                     <div class="col-md-4 col-sm-12">
-                        <div class="section__icon">
-                            <img src="<? the_sub_field('foto') ?>">
-                            <div class="section__text">
+                        <div class="team">
+                            <div class="team__img">
+                                <img src="<? the_sub_field('foto') ?>">
+                            </div>
+                            <div class="team__name">
                                 <? the_sub_field('imya') ?>
                             </div>
                             <small>
@@ -86,23 +88,6 @@ if( have_rows('komanda') ): ?>
         </div>
     </section>
 <? endif; ?>
-
-    <section class="section section--form">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section__title section__title--center">
-                        Задать вопрос:
-                    </h2>
-                </div>
-                <div class="col-12">
-                    <div class="form__wrap">
-                        <? echo do_shortcode('[contact-form-7 id="29" title="Form"]'); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
 
 <?php

@@ -10,30 +10,25 @@
 get_header();
 ?>
 
-    <section class="section">
+    <section class="section catalog-page">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 class="section__title">
-                        Каталог
+                        <? the_archive_title(); ?>
                     </h2>
                 </div>
                 <div class="col-12">
                     <div class="catalog">
                         <?php
-                        $cats = get_terms([
-                            'taxonomy'   => 'category',
-                            'hide_empty' => true,
-                            'parent' => 0,
-                        ]);
-                        foreach ($cats as $cat) :
-                            ?>
-                            <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item">
-                                <div class="catalog__cat">
-                                    <?php echo $cat->name ?>
-                                </div>
+                        while ( have_posts() ) :
+                            the_post(); ?>
+
+                            <a href="<? the_permalink(); ?>" class="catalog__item js-modal" style="background-image: url(<? the_post_thumbnail_url('medium'); ?>)">
                             </a>
-                        <?php endforeach; ?>
+
+                        <? endwhile; // End of the loop.
+                        ?>
                     </div>
                 </div>
             </div>

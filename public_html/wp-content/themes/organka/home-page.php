@@ -21,7 +21,7 @@ if( have_rows('slider') ): ?>
                         <div class="slider__text">
                             <? the_sub_field('text'); ?>
                         </div>
-                        <a class="slider__btn btn btn--white" href="<? the_sub_field('link'); ?>">
+                        <a class="slider__btn btn btn--white js-modal-form" href="#modal">
                             <? the_sub_field('link-text'); ?>
                         </a>
                     </div>
@@ -69,7 +69,7 @@ if(  get_field('text-section') ): ?>
                     ]);
                     foreach ($cats as $cat) :
                         ?>
-                        <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item">
+                        <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item" style="background-image: url('<? the_field('izobrazhenie_kategorii', $cat) ?>');">
                             <div class="catalog__cat">
                                 <?php echo $cat->name ?>
                             </div>
@@ -176,7 +176,7 @@ if( have_rows('vidy_ogranki') ): ?>
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="section__icon">
-                    <svg width="60">
+                    <svg width="60" height="60">
                         <use xlink:href="/wp-content/themes/organka/img/icons.svg#step1"></use>
                     </svg>
                     <div class="section__text">
@@ -186,7 +186,7 @@ if( have_rows('vidy_ogranki') ): ?>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="section__icon">
-                    <svg width="60">
+                    <svg width="60" height="60">
                         <use xlink:href="/wp-content/themes/organka/img/icons.svg#step2"></use>
                     </svg>
                     <div class="section__text">
@@ -196,7 +196,7 @@ if( have_rows('vidy_ogranki') ): ?>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="section__icon">
-                    <svg width="60">
+                    <svg width="60" height="60">
                         <use xlink:href="/wp-content/themes/organka/img/icons.svg#step3"></use>
                     </svg>
                     <div class="section__text">
@@ -206,7 +206,7 @@ if( have_rows('vidy_ogranki') ): ?>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="section__icon">
-                    <svg width="60">
+                    <svg width="60" height="60">
                         <use xlink:href="/wp-content/themes/organka/img/icons.svg#step4"></use>
                     </svg>
                     <div class="section__text">
@@ -246,42 +246,6 @@ if( have_rows('vidy_ogranki') ): ?>
 
                     <? }
                     wp_reset_postdata(); ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--<section class="section">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <h2 class="section__title">-->
-<!--                    Отзывы наших клиентов-->
-<!--                </h2>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <div class="slider-feedback">-->
-<!--                    <a href="#">-->
-<!--                        <div class="slider-feedback__item"></div>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<section class="section section--form">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section__title section__title--center">
-                    Задать вопрос:
-                </h2>
-            </div>
-            <div class="col-12">
-                <div class="form-wrap">
-                    <? echo do_shortcode('[contact-form-7 id="29" title="Form"]'); ?>
                 </div>
             </div>
         </div>

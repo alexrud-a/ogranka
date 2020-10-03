@@ -48,7 +48,17 @@ jQuery(document).ready(function($){
         type: 'ajax',
         autoSize: false,
         width: 700,
-        height: 500,
+        height: 650,
         openEffect: 'elastic'
     });
+
+    $('.js-modal-form').fancybox({
+        type: 'inline',
+        autoSize: false,
+        width: 400,
+        height: 350,
+        openEffect: 'elastic'
+    });
+
+    $('input[type="tel"]').mask('+7 (999) 999-99-99');
 });
