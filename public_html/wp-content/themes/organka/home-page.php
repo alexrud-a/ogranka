@@ -50,39 +50,39 @@ if(  get_field('text-section') ): ?>
     </div>
 </section>
 <? endif; ?>
-<!--<section class="section">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <h2 class="section__title">-->
-<!--                    Каталог выполненных работ-->
-<!--                </h2>-->
-<!--            </div>-->
-<!--            <div class="col-12">-->
-<!--                <div class="catalog">-->
-<!--                    --><?php
-//                    $cats = get_terms([
-//                        'taxonomy'   => 'category',
-//                        'hide_empty' => true,
-//                        'parent' => 0,
-//                        'number' => 4,
-//                    ]);
-//                    foreach ($cats as $cat) :
-//                        ?>
-<!--                        <a href="--><?php //echo get_term_link($cat->term_id, 'category') ?><!--" class="catalog__item" style="background-image: url('--><?// the_field('izobrazhenie_kategorii', $cat) ?>/*');">*/
-/*                            <div class="catalog__cat">*/
-/*                                */<?php //echo $cat->name ?>
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                    --><?php //endforeach; ?>
-<!--                </div>-->
-<!--                <a class="section__btn btn btn--black catalog__btn" href="/katalog">-->
-<!--                    Смотреть все-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<?/*<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section__title">
+                    Каталог выполненных работ
+                </h2>
+            </div>
+            <div class="col-12">
+               <div class="catalog">
+                        <?php
+                    $cats = get_terms([
+                        'taxonomy'   => 'category',
+                        'hide_empty' => true,
+                        'parent' => 0,
+                        'number' => 4,
+                    ]);
+                    foreach ($cats as $cat) :
+                        ?>
+                        <a href="<?php echo get_term_link($cat->term_id, 'category') ?>" class="catalog__item" style="background-image: url('<? the_field('izobrazhenie_kategorii', $cat) ?>');">
+                            <div class="catalog__cat">
+                                <?php echo $cat->name ?>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+                <a class="section__btn btn btn--black catalog__btn" href="/katalog">
+                    Смотреть все
+                </a>
+            </div>
+        </div>
+    </div>
+</section>*/?>
     <? if (get_field('uslugi')) : ?>
 <section class="section">
     <div class="container">
