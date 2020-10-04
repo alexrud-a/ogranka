@@ -55,7 +55,7 @@ if(  get_field('text-section') ): ?>
         <div class="row">
             <div class="col-12">
                 <h2 class="section__title">
-                    Каталог
+                    Каталог выполненных работ
                 </h2>
             </div>
             <div class="col-12">
