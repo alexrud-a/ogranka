@@ -84,7 +84,7 @@ if(  get_field('text-section') ): ?>
     </div>
 </section>*/?>
     <? if (get_field('uslugi')) : ?>
-<section class="section">
+<?/*<section class="section">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -95,7 +95,7 @@ if(  get_field('text-section') ): ?>
         </div>
         <? the_field('uslugi') ?>
     </div>
-</section>
+</section>*/?>
     <? endif; ?>
 
 <?php
