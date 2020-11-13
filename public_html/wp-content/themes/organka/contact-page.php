@@ -15,7 +15,7 @@ get_header();
                     Контакты
                 </h1>
                 <div class="section__map">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae569752ac2df5c086d1b6562a8c4f4d23581512e5d9de60bc66eb837426a3d32&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae569752ac2df5c086d1b6562a8c4f4d23581512e5d9de60bc66eb837426a3d32&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
                 <div class="section__content">
                     <?php
